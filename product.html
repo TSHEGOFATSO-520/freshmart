@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FRESHMART - Shop</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+  <header class="header">
+        <h3><img src="FRESHMART.jpg" alt="freshmart" height="400px" width="50px" /></h3>
+     <h1 class="logo">FRESHMART</h1>
+     <nav class="nav">
+         <a href="mojLogin.html" class="nav-link">Login</a>
+         <a href="index.html" class="nav-link active">Home</a>
+         <a href="product.html" class="nav-link">Shop</a>
+         <a href="contact.html" class="nav-link">Contact</a>
+     </nav>
+  </header>
+
+
+ 
+  
+
+<form id="orderForm" action="order-confirmation.html" method="get" onsubmit="return validateForm()">
+    <div class="customer-info">
+        <h3>Your Information</h3>
+        <input type="text" name="fullName" placeholder="Full Names" required /><br><br>
+        <input type="tel" name="contact" placeholder="Contact" required /><br><br>
+        <input type="email" name="email" placeholder="Email" required /><br><br>
+    </div>
+
+    <section class="products-grid">
+        <div class="product-card">
+            <img src="APPLES.jpg" height="150px" width="200"/>
+            <h3>Apple | R2.00</h3>
+            <p>Juicy apples.</p>
+            <div class="product-controls">
+                <label>Qty:</label>
+                <input type="number" min="1" value="1" class="quantity" data-product="Apple" />
+                <button type="button" class="add-to-cart" data-product="Apple" data-name="Apple" data-price="2.00">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="BREAD.jpg" height="150px" width="200"/>
+            <h3>Bread | R16.50</h3>
+            <p>Whole grain.</p>
+            <div class="product-controls">
+                <label>Qty:</label>
+                <input type="number" min="1" value="1" class="quantity" data-product="Bread" />
+                <button type="button" class="add-to-cart" data-product="Bread" data-name="Bread" data-price="16.50">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="MILK.jpg" height="150px" width="200"/>
+            <h3>Milk | R26.99</h3>
+            <p>1L fresh milk.</p>
+            <div class="product-controls">
+                <label>Qty:</label>
+                <input type="number" min="1" value="1" class="quantity" data-product="Milk" />
+                <button type="button" class="add-to-cart" data-product="Milk" data-name="Milk" data-price="26.99">Add</button>
+            </div> 
+        </div>
+
+        <div class="product-card">
+            <img src="EGGS" height="150px" width="200"/>
+            <h3>Eggs | R139.99</h3>
+            <p>Dozen eggs.</p>
+            <div class="product-controls">
+                <label>Qty:</label>
+                <input type="number" min="1" value="1" class="quantity" data-product="Eggs" />
+                <button type="button" class="add-to-cart" data-product="Eggs" data-name="Eggs" data-price="139.99">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="BANANAS.jpg" height="150px" width="200" />
+            <h3>Bananas | R19.99</h3>
+            <p>Sweet bananas.</p>
+            <div class="product-controls">
+                <label>Qty:</label>
+                <input type="number" min="1" value="1" class="quantity" data-product="Bananas" />
+                <button type="button" class="add-to-cart" data-product="Bananas" data-name="Bananas" data-price="19.99">Add</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="CARROTS.webp" height="150px" width="200" />
+            <h3>Carrots | R24.99</h3>
+            <p>Crunchy carrots.</p>
+            <div class="product-controls">
+                <label>Qty:</label>
+                <input type="number" min="1" value="1" class="quantity" data-product="Carrots" />
+                <button type="button" class="add-to-cart" data-product="Carrots" data-name="Carrots" data-price="24.99">Add</button>
+            </div>
+        </div>
+
+    </section>
+    <div class="place-order-section">
+        <button type="submit" class="btn-primary">Place Order</button>
+    </div>
+</form>
+
+<div class="cart-sidebar">
+    <h2>My Cart</h2>
+    <div id="cartItems"><p>No items</p></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <p>&copy; 2025 FRESHMART</p>
+</footer>
+</html>

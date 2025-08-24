@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login Form</title>
+<link rel="stylesheet" href="styles.css" />
+
+<div class ="Login-script">
+
+<header class="header">
+
+    <h3><img src="FRESHMART.jpg" alt="freshmart" height="400px" width="50px" /></h3>
+    <h1 class="logo">FRESHMART</h1>
+    <nav class="nav">
+    </nav>
+  </header>
+
+<script>
+    function validateLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username !== 'TSHEGO') {
+            alert('Invalid username.');
+            return false;
+        }
+
+        if (password.length < 6 || password.length > 20) {
+            alert('Password must be between 6 and 20 characters.');
+            return false;
+        }
+
+        if (password.toLowerCase() === 'password') {
+            alert('Password cannot be "password".');
+            return false;
+        }
+
+        if (password !== 'Altruistic') {
+            alert('Incorrect password.');
+            return false;
+        }
+
+        window.location.href = 'index.html';
+        return false;
+    }
+</script>
+</div>
+</head>
+ 
+      <body>
+        <login class="LOGIN">
+            <h2>Login</h2>
+            <form onsubmit="return validateLogin()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required /><br/><br/>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required /><br/><br/>
+                <button type="submit">Login</button>
+            </form>
+        </login>
+            
+      </body>
+   </div>
+</html>
